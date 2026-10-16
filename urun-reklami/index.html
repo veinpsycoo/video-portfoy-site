@@ -59,6 +59,9 @@ footer a{color:var(--txt)}
 <h2>Ürün tanıtımı · Önce / sonra · 3D</h2>
 <div class="g9" id="g9"></div>
 
+<h2>UGC tarzı ürün reklamları · SepetZone</h2>
+<div class="g9" id="gu"></div>
+
 <h2>Maskot · Mekân turu · Tanıtım filmi</h2>
 <div class="g16" id="g16"></div>
 
@@ -87,6 +90,13 @@ const V9=[
  ["3d-figur-turntable","Figür","3D ürün videosu"],
  ["3d-biblo-turntable","Kişiye özel biblo","3D döner tanıtım"]
 ];
+const VU=[
+ ["sepetzone-ugc-cop","Araç içi çöp kovası","Konuşan kişili UGC reklamı"],
+ ["sepetzone-ugc-kapidur","Kapı stoperi","Konuşan kişili UGC reklamı"],
+ ["sepetzone-ugc-kumanda","Kumanda organizeri","Konuşan kişili UGC reklamı"],
+ ["sepetzone-ugc-kablo","Kablo kutusu","Konuşan kişili UGC reklamı"],
+ ["sepetzone-ugc-kedikum","Kedi kumu küreği","Konuşan kişili UGC reklamı"]
+];
 const V16=[
  ["hasbik-animasyon","Maskot animasyonu","Maskot ve logo intro"],
  ["blender-fuar-standi","Mekân turu","3D fuar standı turu"],
@@ -94,6 +104,7 @@ const V16=[
 ];
 const card=([id,t,d])=>`<div class="card"><video aria-label="${t} – ${d} örnek video" src="../v/${id}.mp4" poster="../v/${id}.jpg" controls playsinline preload="none"></video><div class="b"><h3>${t}</h3><p>${d}</p></div></div>`;
 document.getElementById('g9').innerHTML=V9.map(card).join('');
+document.getElementById('gu').innerHTML=VU.map(card).join('');
 document.getElementById('g16').innerHTML=V16.map(card).join('');
 document.addEventListener('play',e=>{document.querySelectorAll('video').forEach(v=>{if(v!==e.target)v.pause()})},true);
 </script>
